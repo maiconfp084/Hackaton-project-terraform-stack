@@ -1,9 +1,8 @@
 # Specify the provider and access details
 provider "aws" {
-  access_key = "${var.AWS_ACCESS_KEY}"
-  secret_key = "${var.AWS_SECRET_KEY}"
-  session_token = "${var.AWS_SESSION_TOKEN}"  
-  region = "${var.aws_region}"
+  access_key = var.AWS_ACCESS_KEY
+  secret_key = var.AWS_SECRET_KEY
+  region = "us-east-1"
 }
 
 data "template_file" "script" {
